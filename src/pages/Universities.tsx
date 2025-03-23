@@ -1,9 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { motion } from 'framer-motion';
-import { fadeIn } from '@/utils/animations';
+import PageTemplate from '@/components/PageTemplate';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -19,10 +16,6 @@ import { Search, MapPin, GraduationCap } from 'lucide-react';
 const Universities = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [countryFilter, setCountryFilter] = useState('');
-  
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   // Sample university data
   const universities = [
@@ -83,7 +76,7 @@ const Universities = () => {
       location: 'Zurich, Switzerland',
       ranking: '#9 Global',
       description: 'ETH Zurich is a science, technology, engineering and mathematics university known for groundbreaking research.',
-      programs: '25+ bachelor's and 40+ master's programs in STEM fields',
+      programs: '25+ bachelor\'s and 40+ master\'s programs in STEM fields',
       image: 'https://placehold.co/600x400/e2e8f0/475569?text=ETH+Zurich'
     },
   ];
@@ -99,101 +92,85 @@ const Universities = () => {
   });
 
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <main className="pt-20">
-        <div className="section-container">
-          <motion.div 
-            className="max-w-6xl mx-auto"
-            initial="initial"
-            animate="animate"
-            variants={fadeIn}
-          >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-thynk-800">Explore Universities</h1>
-            <p className="text-lg text-gray-700 mb-12 max-w-3xl">
-              Discover top universities around the world and find the perfect institution for your academic journey.
-              Use the filters below to narrow down your search.
-            </p>
-            
-            <div className="flex flex-col md:flex-row gap-4 mb-10">
-              <div className="relative flex-grow">
-                <Search className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
-                <Input 
-                  placeholder="Search universities..." 
-                  className="pl-10"
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                />
-              </div>
-              <div className="w-full md:w-64">
-                <Select value={countryFilter} onValueChange={setCountryFilter}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Filter by country" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="">All Countries</SelectItem>
-                    <SelectItem value="USA">USA</SelectItem>
-                    <SelectItem value="UK">UK</SelectItem>
-                    <SelectItem value="Canada">Canada</SelectItem>
-                    <SelectItem value="Australia">Australia</SelectItem>
-                    <SelectItem value="Germany">Germany</SelectItem>
-                    <SelectItem value="Switzerland">Switzerland</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              <Button 
-                variant="outline" 
-                onClick={() => {
-                  setSearchTerm('');
-                  setCountryFilter('');
-                }}
-              >
-                Clear Filters
-              </Button>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredUniversities.map((university) => (
-                <Card key={university.id} className="overflow-hidden hover:shadow-md transition-shadow">
-                  <img 
-                    src={university.image} 
-                    alt={university.name} 
-                    className="w-full h-48 object-cover"
-                  />
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-2 text-thynk-700">{university.name}</h3>
-                    
-                    <div className="flex items-center mb-2 text-sm text-gray-600">
-                      <MapPin className="h-4 w-4 mr-1" />
-                      <span>{university.location}</span>
-                    </div>
-                    
-                    <div className="flex items-center mb-4 text-sm text-gray-600">
-                      <GraduationCap className="h-4 w-4 mr-1" />
-                      <span>Ranking: {university.ranking}</span>
-                    </div>
-                    
-                    <p className="text-gray-700 mb-4 line-clamp-3">{university.description}</p>
-                    
-                    <Button className="w-full bg-thynk-600 hover:bg-thynk-700">
-                      View Details
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-            
-            {filteredUniversities.length === 0 && (
-              <div className="text-center py-12">
-                <p className="text-lg text-gray-500">No universities matching your criteria were found.</p>
-                <p className="text-gray-500 mt-2">Try adjusting your filters or search term.</p>
-              </div>
-            )}
-          </motion.div>
+    <PageTemplate 
+      title="Explore Universities"
+      description="Discover top universities around the world and find the perfect institution for your academic journey. Use the filters below to narrow down your search."
+    >
+      <div className="flex flex-col md:flex-row gap-4 mb-10">
+        <div className="relative flex-grow">
+          <Search className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+          <Input 
+            placeholder="Search universities..." 
+            className="pl-10"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
         </div>
-      </main>
-      <Footer />
-    </div>
+        <div className="w-full md:w-64">
+          <Select value={countryFilter} onValueChange={setCountryFilter}>
+            <SelectTrigger>
+              <SelectValue placeholder="Filter by country" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="">All Countries</SelectItem>
+              <SelectItem value="USA">USA</SelectItem>
+              <SelectItem value="UK">UK</SelectItem>
+              <SelectItem value="Canada">Canada</SelectItem>
+              <SelectItem value="Australia">Australia</SelectItem>
+              <SelectItem value="Germany">Germany</SelectItem>
+              <SelectItem value="Switzerland">Switzerland</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+        <Button 
+          variant="outline" 
+          onClick={() => {
+            setSearchTerm('');
+            setCountryFilter('');
+          }}
+        >
+          Clear Filters
+        </Button>
+      </div>
+      
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filteredUniversities.map((university) => (
+          <Card key={university.id} className="overflow-hidden hover:shadow-md transition-shadow">
+            <img 
+              src={university.image} 
+              alt={university.name} 
+              className="w-full h-48 object-cover"
+            />
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-2 text-thynk-700">{university.name}</h3>
+              
+              <div className="flex items-center mb-2 text-sm text-gray-600">
+                <MapPin className="h-4 w-4 mr-1" />
+                <span>{university.location}</span>
+              </div>
+              
+              <div className="flex items-center mb-4 text-sm text-gray-600">
+                <GraduationCap className="h-4 w-4 mr-1" />
+                <span>Ranking: {university.ranking}</span>
+              </div>
+              
+              <p className="text-gray-700 mb-4 line-clamp-3">{university.description}</p>
+              
+              <Button className="w-full bg-thynk-600 hover:bg-thynk-700">
+                View Details
+              </Button>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+      
+      {filteredUniversities.length === 0 && (
+        <div className="text-center py-12">
+          <p className="text-lg text-gray-500">No universities matching your criteria were found.</p>
+          <p className="text-gray-500 mt-2">Try adjusting your filters or search term.</p>
+        </div>
+      )}
+    </PageTemplate>
   );
 };
 
