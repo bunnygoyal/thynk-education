@@ -14,10 +14,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 187 100% 41%; /* Adjusted to match the Thynk Education teal color */
+    --primary: 198 78% 47%; /* Decision Blue: #1A9ED4 */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 177 66% 42%; /* Certainty Teal: #24B2AA */
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
@@ -48,6 +48,14 @@
   html {
     @apply scroll-smooth;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+
+  p, span, div, li, input, textarea, select {
+    @apply font-sans;
+  }
 }
 
 @layer components {
@@ -68,13 +76,18 @@
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-thynk-600 to-thynk-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-thynk-500 to-teal-500 bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-gold-600 to-gold-400 bg-clip-text text-transparent;
   }
   
   .subtle-shadow {
     box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
   }
   
+  /* Animation utility classes */
   .animate-delay-100 {
     animation-delay: 100ms;
   }
@@ -93,5 +106,22 @@
   
   .animate-delay-500 {
     animation-delay: 500ms;
+  }
+
+  /* Button styles aligned with brand architecture */
+  .btn-primary {
+    @apply bg-thynk-500 hover:bg-thynk-600 text-white font-heading font-semibold transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-teal-500 hover:bg-teal-600 text-white font-heading font-semibold transition-colors;
+  }
+
+  .btn-navy {
+    @apply bg-navy-500 hover:bg-navy-600 text-white font-heading font-semibold transition-colors;
+  }
+
+  .btn-outline {
+    @apply border-2 border-thynk-500 text-thynk-500 hover:bg-thynk-50 font-heading font-semibold transition-colors;
   }
 }

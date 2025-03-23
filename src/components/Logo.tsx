@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 
 interface LogoProps {
   className?: string;
+  variant?: 'default' | 'white';
 }
 
-const Logo: React.FC<LogoProps> = ({ className = "" }) => {
+const Logo: React.FC<LogoProps> = ({ className = "", variant = 'default' }) => {
   return (
     <Link to="/" className={`flex items-center ${className}`}>
       <img 
@@ -14,6 +15,9 @@ const Logo: React.FC<LogoProps> = ({ className = "" }) => {
         alt="Thynk Education Logo" 
         className="h-10" 
       />
+      <span className={`ml-2 font-heading font-bold text-xl ${variant === 'white' ? 'text-white' : 'text-navy-500'}`}>
+        THYNK
+      </span>
     </Link>
   );
 };

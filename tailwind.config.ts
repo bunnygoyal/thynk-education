@@ -20,7 +20,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["SF Pro Display", "Inter", "sans-serif"],
+        sans: ["Open Sans", "sans-serif"],
+        heading: ["Montserrat", "sans-serif"],
+        mono: ["Roboto Mono", "monospace"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -56,18 +58,58 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // New brand colors
         thynk: {
-          50: "#e6f9fa",
-          100: "#ccf3f6",
-          200: "#99e7ed",
-          300: "#66dbe4",
-          400: "#33cfdb",
-          500: "#00c3d2", // Main brand color from the image
-          600: "#009ca8",
-          700: "#00757e",
-          800: "#004e54",
-          900: "#00272a",
-          950: "#001315",
+          50: "#e6f5f9",
+          100: "#ccebf3",
+          200: "#99d7e7",
+          300: "#66c3db",
+          400: "#33afcf",
+          500: "#1A9ED4", // Decision Blue
+          600: "#24B2AA", // Certainty Teal
+          700: "#0A3D62", // Commitment Navy
+          800: "#08304e",
+          900: "#041827",
+          950: "#020c14",
+        },
+        teal: {
+          DEFAULT: "#24B2AA", // Certainty Teal
+          50: "#e9f7f6",
+          100: "#d3efed",
+          200: "#a6e0db",
+          300: "#79d0c9",
+          400: "#4cc1b7",
+          500: "#24B2AA",
+          600: "#1d8e88",
+          700: "#166b66",
+          800: "#0f4744",
+          900: "#082422",
+        },
+        navy: {
+          DEFAULT: "#0A3D62", // Commitment Navy
+          50: "#e6edf3",
+          100: "#ccdbe7",
+          200: "#99b7cf",
+          300: "#6693b7",
+          400: "#336f9f",
+          500: "#0A3D62",
+          600: "#08314e",
+          700: "#06253b",
+          800: "#041827",
+          900: "#020c14",
+        },
+        gold: {
+          DEFAULT: "#F9BF3B", // Accent Gold
+          50: "#fef8e8",
+          100: "#fdf1d1",
+          200: "#fbe3a3",
+          300: "#fad575",
+          400: "#f9c747",
+          500: "#F9BF3B",
+          600: "#c7992f",
+          700: "#957324",
+          800: "#644c18",
+          900: "#32260c",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
