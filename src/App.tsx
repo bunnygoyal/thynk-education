@@ -1,9 +1,10 @@
+
+import React from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
 
 // Page imports
 import Index from "./pages/Index";
@@ -29,10 +30,10 @@ import Programs from "./pages/Programs";
 import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
 
-const App = () => {
-  // Create a new QueryClient instance inside the component
-  const [queryClient] = useState(() => new QueryClient());
+// Create a QueryClient instance outside the component
+const queryClient = new QueryClient();
 
+const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
