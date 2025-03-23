@@ -14,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 210 100% 40%;
+    --primary: 187 100% 41%; /* Adjusted to match the Thynk Education teal color */
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -68,7 +68,7 @@
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-thynk-700 to-thynk-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-thynk-600 to-thynk-400 bg-clip-text text-transparent;
   }
   
   .subtle-shadow {

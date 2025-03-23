@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -12,6 +11,7 @@ import {
   ChevronDown 
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Logo from './Logo';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,11 +40,7 @@ const Header = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link to="/" className="flex items-center">
-          <span className="text-xl font-bold text-thynk-800">
-            Thynk <span className="text-thynk-600">Education</span>
-          </span>
-        </Link>
+        <Logo />
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-1">
@@ -79,11 +75,11 @@ const Header = () => {
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
-          <Button variant="ghost" size="sm" className="text-thynk-800 hover:text-thynk-600">
+          <Button variant="ghost" size="sm" className="text-thynk-800 hover:text-thynk-500">
             <User className="h-4 w-4 mr-2" />
             Log In
           </Button>
-          <Button className="bg-thynk-600 hover:bg-thynk-700 text-white transition duration-300">
+          <Button className="bg-thynk-500 hover:bg-thynk-600 text-white transition duration-300">
             Get Started
           </Button>
         </div>
@@ -121,7 +117,7 @@ const Header = () => {
                 <User className="h-5 w-5 mr-3" />
                 Log In
               </Button>
-              <Button className="bg-thynk-600 hover:bg-thynk-700 text-white justify-start">
+              <Button className="bg-thynk-500 hover:bg-thynk-600 text-white justify-start">
                 Get Started
               </Button>
             </div>

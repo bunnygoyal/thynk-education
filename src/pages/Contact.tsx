@@ -14,11 +14,11 @@ const Contact = () => {
     >
       <div className="grid md:grid-cols-2 gap-12">
         <div>
-          <h2 className="text-2xl font-bold mb-6 text-thynk-700">Get in Touch</h2>
+          <h2 className="text-2xl font-bold mb-6 text-thynk-600">Get in Touch</h2>
           
           <div className="space-y-6">
             <div className="flex items-start">
-              <MapPin className="h-6 w-6 text-thynk-600 mt-1 mr-4" />
+              <MapPin className="h-6 w-6 text-thynk-500 mt-1 mr-4" />
               <div>
                 <h3 className="font-medium text-gray-900">Our Office</h3>
                 <p className="text-gray-700">123 Education Avenue, Knowledge City, Country</p>
@@ -26,25 +26,32 @@ const Contact = () => {
             </div>
             
             <div className="flex items-start">
-              <Phone className="h-6 w-6 text-thynk-600 mt-1 mr-4" />
+              <Phone className="h-6 w-6 text-thynk-500 mt-1 mr-4" />
               <div>
                 <h3 className="font-medium text-gray-900">Phone</h3>
-                <p className="text-gray-700">+1 (123) 456-7890</p>
+                <p className="text-gray-700">+91 8294739402</p>
               </div>
             </div>
             
             <div className="flex items-start">
-              <Mail className="h-6 w-6 text-thynk-600 mt-1 mr-4" />
+              <Mail className="h-6 w-6 text-thynk-500 mt-1 mr-4" />
               <div>
                 <h3 className="font-medium text-gray-900">Email</h3>
                 <p className="text-gray-700">info@thynkeducation.com</p>
               </div>
             </div>
           </div>
+          
+          <div className="mt-8">
+            <h3 className="font-medium text-gray-900 mb-2">Visit our website</h3>
+            <a href="https://www.thynkeducation.com" target="_blank" rel="noopener noreferrer" className="text-thynk-500 hover:underline">
+              www.thynkeducation.com
+            </a>
+          </div>
         </div>
         
         <div>
-          <h2 className="text-2xl font-bold mb-6 text-thynk-700">Send a Message</h2>
+          <h2 className="text-2xl font-bold mb-6 text-thynk-600">Send a Message</h2>
           <form className="space-y-4">
             <div>
               <Input placeholder="Your Name" />
@@ -58,7 +65,7 @@ const Contact = () => {
             <div>
               <Textarea placeholder="Your Message" className="min-h-[120px]" />
             </div>
-            <Button className="bg-thynk-600 hover:bg-thynk-700">
+            <Button className="bg-thynk-500 hover:bg-thynk-600">
               Send Message
             </Button>
           </form>

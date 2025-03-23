@@ -13,6 +13,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Logo from './Logo';
 
 const Footer = () => {
   return (
@@ -22,17 +23,15 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-6">
             <div>
-              <Link to="/" className="text-xl font-bold text-thynk-800">
-                Thynk <span className="text-thynk-600">Education</span>
-              </Link>
+              <Logo className="mb-4" />
               <p className="text-gray-600 mt-4 max-w-md">
-                Transforming education journeys with personalized guidance for students seeking to study abroad at top universities worldwide.
+                "Education for a world stage" – We at THYNK believe in providing a platform where students can work with eminent admission service experts to transform their abroad education dreams into reality.
               </p>
             </div>
             
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-thynk-600 mt-0.5" />
+                <MapPin className="h-5 w-5 text-thynk-500 mt-0.5" />
                 <div>
                   <p className="text-gray-800">123 Education Lane, Suite 500</p>
                   <p className="text-gray-600">New York, NY 10001, USA</p>
@@ -40,30 +39,30 @@ const Footer = () => {
               </div>
               
               <div className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-thynk-600" />
-                <p className="text-gray-800">+1 (555) 234-5678</p>
+                <Phone className="h-5 w-5 text-thynk-500" />
+                <p className="text-gray-800">+91 8294739402</p>
               </div>
               
               <div className="flex items-center gap-3">
-                <Mail className="h-5 w-5 text-thynk-600" />
-                <p className="text-gray-800">contact@thynkeducation.com</p>
+                <Mail className="h-5 w-5 text-thynk-500" />
+                <p className="text-gray-800">info@thynkeducation.com</p>
               </div>
             </div>
             
             <div className="flex gap-4 pt-2">
-              <a href="#" className="bg-white p-2 rounded-full text-gray-500 hover:text-thynk-600 transition-colors border border-gray-200 hover:border-thynk-200">
+              <a href="#" className="bg-white p-2 rounded-full text-gray-500 hover:text-thynk-500 transition-colors border border-gray-200 hover:border-thynk-200">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-white p-2 rounded-full text-gray-500 hover:text-thynk-600 transition-colors border border-gray-200 hover:border-thynk-200">
+              <a href="#" className="bg-white p-2 rounded-full text-gray-500 hover:text-thynk-500 transition-colors border border-gray-200 hover:border-thynk-200">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-white p-2 rounded-full text-gray-500 hover:text-thynk-600 transition-colors border border-gray-200 hover:border-thynk-200">
+              <a href="#" className="bg-white p-2 rounded-full text-gray-500 hover:text-thynk-500 transition-colors border border-gray-200 hover:border-thynk-200">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-white p-2 rounded-full text-gray-500 hover:text-thynk-600 transition-colors border border-gray-200 hover:border-thynk-200">
+              <a href="#" className="bg-white p-2 rounded-full text-gray-500 hover:text-thynk-500 transition-colors border border-gray-200 hover:border-thynk-200">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-white p-2 rounded-full text-gray-500 hover:text-thynk-600 transition-colors border border-gray-200 hover:border-thynk-200">
+              <a href="#" className="bg-white p-2 rounded-full text-gray-500 hover:text-thynk-500 transition-colors border border-gray-200 hover:border-thynk-200">
                 <Youtube className="h-5 w-5" />
               </a>
             </div>
@@ -74,22 +73,22 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-gray-900">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/about" className="text-gray-600 hover:text-thynk-600 transition-colors">About Us</Link>
+                <Link to="/about" className="text-gray-600 hover:text-thynk-500 transition-colors">About Us</Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-600 hover:text-thynk-600 transition-colors">Our Services</Link>
+                <Link to="/services" className="text-gray-600 hover:text-thynk-500 transition-colors">Our Services</Link>
               </li>
               <li>
-                <Link to="/universities" className="text-gray-600 hover:text-thynk-600 transition-colors">Universities</Link>
+                <Link to="/universities" className="text-gray-600 hover:text-thynk-500 transition-colors">Universities</Link>
               </li>
               <li>
-                <Link to="/programs" className="text-gray-600 hover:text-thynk-600 transition-colors">Programs</Link>
+                <Link to="/programs" className="text-gray-600 hover:text-thynk-500 transition-colors">Programs</Link>
               </li>
               <li>
-                <Link to="/resources" className="text-gray-600 hover:text-thynk-600 transition-colors">Resources</Link>
+                <Link to="/resources" className="text-gray-600 hover:text-thynk-500 transition-colors">Resources</Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-600 hover:text-thynk-600 transition-colors">Contact</Link>
+                <Link to="/contact" className="text-gray-600 hover:text-thynk-500 transition-colors">Contact</Link>
               </li>
             </ul>
           </div>
@@ -99,22 +98,22 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-gray-900">Study Destinations</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/destinations/usa" className="text-gray-600 hover:text-thynk-600 transition-colors">Study in USA</Link>
+                <Link to="/destinations/usa" className="text-gray-600 hover:text-thynk-500 transition-colors">Study in USA</Link>
               </li>
               <li>
-                <Link to="/destinations/uk" className="text-gray-600 hover:text-thynk-600 transition-colors">Study in UK</Link>
+                <Link to="/destinations/uk" className="text-gray-600 hover:text-thynk-500 transition-colors">Study in UK</Link>
               </li>
               <li>
-                <Link to="/destinations/canada" className="text-gray-600 hover:text-thynk-600 transition-colors">Study in Canada</Link>
+                <Link to="/destinations/canada" className="text-gray-600 hover:text-thynk-500 transition-colors">Study in Canada</Link>
               </li>
               <li>
-                <Link to="/destinations/australia" className="text-gray-600 hover:text-thynk-600 transition-colors">Study in Australia</Link>
+                <Link to="/destinations/australia" className="text-gray-600 hover:text-thynk-500 transition-colors">Study in Australia</Link>
               </li>
               <li>
-                <Link to="/destinations/germany" className="text-gray-600 hover:text-thynk-600 transition-colors">Study in Germany</Link>
+                <Link to="/destinations/germany" className="text-gray-600 hover:text-thynk-500 transition-colors">Study in Germany</Link>
               </li>
               <li>
-                <Link to="/destinations" className="text-gray-600 hover:text-thynk-600 transition-colors">All Destinations</Link>
+                <Link to="/destinations" className="text-gray-600 hover:text-thynk-500 transition-colors">All Destinations</Link>
               </li>
             </ul>
           </div>
@@ -132,7 +131,7 @@ const Footer = () => {
                 placeholder="Your email address" 
                 className="px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-thynk-500 focus:border-transparent"
               />
-              <Button className="bg-thynk-600 hover:bg-thynk-700 text-white">
+              <Button className="bg-thynk-500 hover:bg-thynk-600 text-white">
                 Subscribe
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -152,9 +151,9 @@ const Footer = () => {
           </p>
           
           <div className="flex flex-wrap gap-5">
-            <Link to="/privacy" className="text-sm text-gray-500 hover:text-thynk-600">Privacy Policy</Link>
-            <Link to="/terms" className="text-sm text-gray-500 hover:text-thynk-600">Terms of Service</Link>
-            <Link to="/cookies" className="text-sm text-gray-500 hover:text-thynk-600">Cookie Policy</Link>
+            <Link to="/privacy" className="text-sm text-gray-500 hover:text-thynk-500">Privacy Policy</Link>
+            <Link to="/terms" className="text-sm text-gray-500 hover:text-thynk-500">Terms of Service</Link>
+            <Link to="/cookies" className="text-sm text-gray-500 hover:text-thynk-500">Cookie Policy</Link>
           </div>
         </div>
       </div>
